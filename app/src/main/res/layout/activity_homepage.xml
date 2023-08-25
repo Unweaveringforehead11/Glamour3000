@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.HomepageActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar2">
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/person_white"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="Welcome"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/titleTv"
+            android:text="abc@example.com"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/logout_gray"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/bottomLl2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+    <Button
+        android:id="@+id/categoriesBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_button1"
+        android:minHeight="50dp"
+        android:text="Show Categories"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/toolbarRl"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/itemsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button1"
+            android:minHeight="50dp"
+            android:text="Show Items"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

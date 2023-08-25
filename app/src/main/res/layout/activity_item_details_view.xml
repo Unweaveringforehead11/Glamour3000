@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.ItemDetailsViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar2"
+        android:id="@+id/toolbarRl">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Item Details"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/toolbarRl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/pdfRl"
+                    android:layout_width="110dp"
+                    android:layout_height="130dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/gray2"
+                    android:layout_centerHorizontal="true">
+
+                    <!--<com.github.barteksc.pdfviewer.PDFView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/pdfView"/>-->
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/itemIv"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/person_gray"
+                        app:shapeAppearanceOverlay="@style/styleRoundedCornersImage"/>
+
+                    <!--<ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/progressBar"/>-->
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@id/titleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_below="@id/pdfRl"
+                    android:layout_marginTop="10dp"
+                    android:text="Item Title"
+                    android:textAlignment="center"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/categoryLabelTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="Category:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@id/categoryTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="N/A"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="15dp"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/dateLabelTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="Date:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dateTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="N/A"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="15dp"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/sizeLabelTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="Size:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sizeTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_below="@+id/titleTv"
+                            android:layout_marginTop="10dp"
+                            android:text="N/A"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="15dp"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/notesLabelTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="Notes:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/notesTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="N/A"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="15dp"/>
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/pagesLabelTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="Pages:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pagesTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_marginTop="10dp"
+                            android:text="N/A"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="15dp"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionTv"
+                android:layout_marginTop="10dp"
+                android:text="The description of the item."
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/purple_500"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/favoriteBtn"
+            android:drawableTop="@drawable/favorite_border_gray"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="Add Favorite"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

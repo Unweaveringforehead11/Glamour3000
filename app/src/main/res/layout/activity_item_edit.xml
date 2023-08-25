@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.ItemEditActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar1">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_white"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Edit Item Info"
+            android:textSize="28sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginTop="225dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemTil1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/itemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext1"
+                    android:drawableStart="@drawable/category_gray"
+                    android:drawablePadding="10dp"
+                    android:hint="Item Name"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray1"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemTil2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemTil1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/itemDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext1"
+                    android:drawableStart="@drawable/category_gray"
+                    android:drawablePadding="10dp"
+                    android:hint="Item Description"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray1"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemTil3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemTil2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:hintEnabled="false">
+
+                <TextView
+                    android:id="@+id/itemCategoryTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemTil2"
+                    android:background="@drawable/shape_edittext1"
+                    android:drawableStart="@drawable/category_gray"
+                    android:drawableEnd="@drawable/down_gray"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:hint="Item Category"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray1"
+                    android:textSize="16sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemTil4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemTil3"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/itemNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape_edittext1"
+                    android:drawableStart="@drawable/category_gray"
+                    android:drawablePadding="10dp"
+                    android:hint="Item Notes"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray1"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemTil5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemTil4"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:hintEnabled="false">
+
+                <TextView
+                    android:id="@+id/txtView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Select the date you wore this item:"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/gray1"
+                    android:textSize = "15dp" />
+
+                <Button
+                    android:id="@+id/btnDatePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView2"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Select date"
+                    android:textColor="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemTil5"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_button1"
+                android:text="Update"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

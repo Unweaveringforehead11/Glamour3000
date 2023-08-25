@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "373237973223",
+    "project_id": "fashioncollectable",
+    "storage_bucket": "fashioncollectable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373237973223:android:6684b637d1de4cbd98a242",
+        "android_client_info": {
+          "package_name": "com.example.ourapplicationglamour3000"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373237973223-qtbinkoiik3o9gfn7903osqigikavljp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANDU8lrOqlF4o6nEVMwhRmdtsiOyehE1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373237973223-qtbinkoiik3o9gfn7903osqigikavljp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
